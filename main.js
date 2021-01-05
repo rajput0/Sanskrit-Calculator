@@ -11,6 +11,7 @@ function replaceEnglish(str){
   res = res.toString().replace(/7/g,"७");
   res = res.toString().replace(/8/g,"८");
   res = res.toString().replace(/9/g,"९");
+  res = res.toString().replace(/0/g,"०");
   console.log("res: " +  res)
   return res;
   
