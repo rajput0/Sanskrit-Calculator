@@ -108,6 +108,8 @@ html {
   justify-content: center;
   align-items: center;
   transition: background-color 0.5s;
+  border: black 1px solid;
+  
 }
 
 .keys .column span {
@@ -120,13 +122,15 @@ html {
 
 .operators {
   width: 20%;
-  font-size: 18px;
+  font-size: 25px;
   background-color: #434343;
+  border: black 2px solid;
 }
 
 .delete {
   font-size: 16px;
   text-transform: uppercase;
+  color: red;
 }
 
 .credit {
