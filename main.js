@@ -13,12 +13,30 @@ function replaceEnglish(str){
   res = res.toString().replace(/9/g,"९");
   res = res.toString().replace(/0/g,"०");
   res = res.toString().replace("Infinity","अनन्त");
-  console.log("res: " +  res)
+  //console.log("res: " +  res)
   return res;
-  
 }
 
+function playSound(){
+  console.log(this);
+  let audio = new Audio(`sounds/${this.getAttribute("data-key")}.mp3`);
+  audio.play();
+}
 
+const soundKeys = document.getElementsByClassName("sound-keys");
+function addSound(arr){
+  if(true){
+    for(let i=0; i<arr.length; i++){
+      arr[i].addEventListener("click",playSound);
+    }
+  }else{
+    for(let i=0; i<arr.length; i++){
+      arr[i].removeEventListener("click");
+    }
+  }
+  
+}
+addSound(soundKeys);
 const input = document.querySelector(".input");
 const result = document.querySelector(".result");
 const deleteBtn = document.querySelector(".delete");
@@ -32,9 +50,9 @@ const operators = ["+", "-", "x", "÷"];
 
 function handleKeyPress (e) {
   const key = e.target.dataset.key;
-  console.log(key)
+  //console.log(key)
   const lastChar = operation[operation.length - 1];
-  console.log(lastChar)
+  //console.log(lastChar)
 
   if (key === "=") {
     return;
@@ -114,7 +132,7 @@ function evaluate(e) {
       input.innerHTML = `<span class="error">${replaceEnglish(operation)}</span>`;
       result.innerHTML = `<span class="error">दुर्व्याहृत</span>`;
     }
-    console.log(e);
+    //console.log(e);
   }
 
 }
