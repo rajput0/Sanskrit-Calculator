@@ -145,3 +145,11 @@ html {
 .credit a, .error {
   color: #C2185B;
 }
+
+footer{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
+}
