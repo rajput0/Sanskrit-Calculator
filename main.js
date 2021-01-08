@@ -12,6 +12,7 @@ function replaceEnglish(str){
   res = res.toString().replace(/8/g,"८");
   res = res.toString().replace(/9/g,"९");
   res = res.toString().replace(/0/g,"०");
+  res = res.toString().replace("Infinity","अनन्त");
   console.log("res: " +  res)
   return res;
   
@@ -111,7 +112,7 @@ function evaluate(e) {
     if (key === "=") {
       decimalAdded = false;
       input.innerHTML = `<span class="error">${replaceEnglish(operation)}</span>`;
-      result.innerHTML = `<span class="error">Bad Expression</span>`;
+      result.innerHTML = `<span class="error">दुर्व्याहृत</span>`;
     }
     console.log(e);
   }
