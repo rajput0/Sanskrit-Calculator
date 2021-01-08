@@ -24,19 +24,19 @@ function playSound(){
 }
 
 const soundKeys = document.getElementsByClassName("sound-keys");
-function addSound(arr){
-  if(true){
-    for(let i=0; i<arr.length; i++){
-      arr[i].addEventListener("click",playSound);
+function addSound(){
+  if(document.getElementById("sound-toggle-button").checked){
+    for(let i=0; i<soundKeys.length; i++){
+      soundKeys[i].addEventListener("click",playSound);
     }
   }else{
-    for(let i=0; i<arr.length; i++){
-      arr[i].removeEventListener("click");
+    for(let i=0; i<soundKeys.length; i++){
+      soundKeys[i].removeEventListener("click",playSound);
     }
   }
   
 }
-addSound(soundKeys);
+
 const input = document.querySelector(".input");
 const result = document.querySelector(".result");
 const deleteBtn = document.querySelector(".delete");
